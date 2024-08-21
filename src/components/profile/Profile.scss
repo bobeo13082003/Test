@@ -70,6 +70,61 @@
                 width: 250px;
             }
 
+            select {
+                width: 250px;
+
+            }
+
         }
     }
 }
+
+.paginate {
+    display: flex;
+    justify-content: end;
+}
+
+.action {
+    display: flex;
+    gap: 30px;
+    width: 108px;
+    justify-content: center;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+
+// Modal
+.input {
+    display: flex;
+    gap: 50px;
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            width: 300px;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+            width: 500px;
+        }
+    }
+}
+
+.selecttag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+// End Modal
