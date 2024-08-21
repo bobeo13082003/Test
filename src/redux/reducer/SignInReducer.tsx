@@ -2,14 +2,15 @@ import { USER_SIGNIN } from "../action/SignInAction";
 
 const INITAL_SIGNIN = {
     account: {
-        token: ''
+        token: '',
+        refreshToken: ''
     },
     isAuthenticated: false
 };
 
 type data = {
     type: string,
-    payload: { data: string }
+    payload: { token: string, refreshToken: string }
 }
 
 const SignInReducer = (state = INITAL_SIGNIN, action: data) => {
@@ -18,10 +19,13 @@ const SignInReducer = (state = INITAL_SIGNIN, action: data) => {
             return {
                 ...state,
                 account: {
-                    token: action.payload.data
+                    token: action.payload.token,
+                    refreshToken: action.payload.refreshToken
                 },
                 isAuthenticated: true
             }
+        default:
+            return state;
     }
 }
 

@@ -4,8 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/logo.png'
 import './Header.scss'
 import { useNavigate } from 'react-router';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/reducer/RootReducer';
 const Header = () => {
     const navigate = useNavigate();
+    const isAuthenticated = useSelector((state: RootState) => state.SignInReducer.isAuthenticated)
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container>
@@ -23,7 +26,10 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link className='text-center'>
-                                <button onClick={() => navigate('/profile')} className='nav__signin mx-2'>Profile</button>
+                                {
+                                    isAuthenticated &&
+                                    <button onClick={() => navigate('/profile')} className='nav__signin mx-2'>Profile</button>
+                                }
                                 <button onClick={() => navigate('/signin')} className='nav__signin'>Sign In</button>
                             </Nav.Link>
                         </Nav>

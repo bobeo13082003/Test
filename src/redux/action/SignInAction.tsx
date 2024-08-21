@@ -1,8 +1,8 @@
 export const USER_SIGNIN = "USER_SIGNIN";
 
-export const doLogin = (data: string) => {
+export const doLogin = (token: string, refreshToken: string) => {
     return {
         type: USER_SIGNIN,
-        payload: data
+        payload: { token, refreshToken }
     }
 }

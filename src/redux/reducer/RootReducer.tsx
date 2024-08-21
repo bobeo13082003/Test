@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 import SignInReducer from './SignInReducer';
 
-const RootReducer = combineReducers({
+export const RootReducer = combineReducers({
     SignInReducer,
 })
-
-export default RootReducer;
+export type RootState = ReturnType<typeof RootReducer>
