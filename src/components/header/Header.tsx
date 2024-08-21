@@ -23,6 +23,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             <Nav.Link className='text-center'>
+                                <button onClick={() => navigate('/profile')} className='nav__signin mx-2'>Profile</button>
                                 <button onClick={() => navigate('/signin')} className='nav__signin'>Sign In</button>
                             </Nav.Link>
                         </Nav>

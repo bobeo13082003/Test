@@ -1,0 +1,75 @@
+:root {
+    --color-text: #232550;
+    --color-main: #9470DB;
+    --font-large: "Open Sans";
+    --font-min: "Nunito";
+}
+
+
+.profile {
+
+
+    &__navbar {
+        width: 260px;
+        height: 100vh;
+        background-color: rgba(128, 128, 128, 0.24);
+
+        img {
+            margin-top: 10px;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-left: 20px;
+            gap: 20px;
+            font-weight: 400;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+    }
+
+    &__content {
+        margin-top: 100px;
+
+        &__addnew {
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                border: none;
+                border-radius: 20px;
+                padding: 7px 50px;
+                background-color: var(--color-main);
+                color: white;
+                font-weight: 600;
+            }
+        }
+
+        &__table {
+            th {
+                text-align: center;
+            }
+
+            td {
+                text-align: center;
+            }
+        }
+
+        &__input {
+            display: flex;
+            gap: 20px;
+
+            input {
+                width: 250px;
+            }
+
+        }
+    }
+}
