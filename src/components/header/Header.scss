@@ -1,0 +1,31 @@
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+
+    &__text {
+        font-size: 17px;
+        margin-left: 100px;
+        font-weight: 500;
+        display: flex;
+        gap: 20px;
+
+        a.nav-link.active {
+            color: #9470DB;
+        }
+
+        a.nav-link:hover {
+            color: #9470DB;
+        }
+    }
+
+
+    &__signin {
+        border: none;
+        padding: 10px 50px;
+        border-radius: 18px;
+        background-color: #9470DB;
+        color: white;
+    }
+}

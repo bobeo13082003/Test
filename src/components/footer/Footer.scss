@@ -1,0 +1,131 @@
+:root {
+    --color-text: #232550;
+    --color-main: #9470DB;
+    --font-large: "Open Sans";
+    --font-min: "Nunito";
+}
+
+.footer {
+    margin-top: 70px;
+
+    &__item {
+
+        a {
+            text-decoration: none;
+            font-family: var(--font-min);
+            color: black;
+            font-weight: 600;
+
+            &:hover {
+                color: var(--color-main);
+            }
+        }
+
+        &__one {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-right: 190px;
+
+            img {
+                width: 70%;
+            }
+
+        }
+
+        &__right {
+
+            .row {
+                gap: 50px;
+            }
+        }
+
+        &__two {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__three {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__four {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            ul {
+                padding-left: 0;
+                display: flex;
+                gap: 10px;
+            }
+
+            ul li {
+                list-style: none;
+                padding: 10px 12px;
+                border-radius: 50%;
+                background-color: gray;
+                color: white;
+
+                &:hover {
+                    background-color: #D870B4;
+                }
+            }
+        }
+    }
+
+    &__end {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0;
+        flex-wrap: wrap-reverse;
+
+        &__chat {
+            padding: 15px 20px;
+            background-color: #9470db6d;
+            border-radius: 50%;
+            color: #9470DB;
+        }
+    }
+}
+
+.title {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media (max-width:1199.98px) {
+    .footer {
+        &__item {
+            text-align: center;
+
+            ul {
+                justify-content: center;
+            }
+
+            &__right {
+                margin-top: 10%;
+            }
+
+            &__two {
+                margin-top: 10%;
+            }
+
+            &__three {
+                margin-top: 10%;
+            }
+
+            &__four {
+                margin-top: 10%;
+            }
+
+        }
+
+        &__end {
+            justify-content: center;
+        }
+    }
+}

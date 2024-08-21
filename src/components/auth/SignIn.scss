@@ -1,0 +1,47 @@
+:root {
+    --color-text: #232550;
+    --color-main: #9470DB;
+    --font-large: "Open Sans";
+    --font-min: "Nunito";
+}
+
+.signin {
+
+    &__form {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15%;
+
+        h2 {
+            margin-bottom: 50px;
+            text-align: center;
+            font-family: var(--font-large);
+            font-size: 40px;
+        }
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            padding: 5px 0;
+        }
+
+    }
+
+    &__button {
+        margin-top: 50px;
+        border: none;
+        background-color: #9470DB;
+        color: white;
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 25px;
+
+        &:hover {
+            background-color: #825bd2;
+        }
+    }
+}
