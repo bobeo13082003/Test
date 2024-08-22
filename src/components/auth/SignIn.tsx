@@ -4,7 +4,7 @@ import './SignIn.scss'
 import { useNavigate } from 'react-router';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import { Login } from '../../services/ApiService';
+import { login } from '../../services/ApiService';
 import { useDispatch } from 'react-redux';
 import { doLogin } from '../../redux/action/SignInAction';
 
@@ -21,7 +21,7 @@ const SignIn = () => {
         if (!userName) {
             toast.error('Username Not Empty!!!')
         } else {
-            const res = await Login(userName)
+            const res = await login(userName)
             if (res && res.data && res.data.accessToken) {
                 dispatch(doLogin(res.data.accessToken, res.data.refreshToken))
                 toast.success('Login Successfully');
