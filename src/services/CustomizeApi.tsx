@@ -30,7 +30,7 @@ instance.interceptors.response.use(function (response) {
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
     const originalRequest = error.config;
-    if (error.response.status === 403 && !originalRequest._retry) {
+    if (error.response.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
         const refresToken = store.getState().SignInReducer.account.refreshToken;
         const res = await refreshToken(refresToken);
